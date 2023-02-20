@@ -1,0 +1,11 @@
+id: 42856
+name: dash
+environments:
+  production:
+    memory: 1024
+    cli-memory: 512
+    runtime: 'php-8.1:al2'
+    database: tallstack
+    build:
+      - 'composer install --no-dev'
+      - 'php artisan event:cache'
